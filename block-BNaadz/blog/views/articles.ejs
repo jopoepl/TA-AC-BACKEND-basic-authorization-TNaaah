@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LOGGED IN SUCCESSFULLY </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1> <%= article.title %></h1>
+    <p> <%= article.description %></p>
+    <button><a href="/articles/">ALL ARTICLES</a></button>
+    <button><a href="/articles/<%= article.slug%>/update">EDIT</a></button>
+    <button><a href="/articles/<%= article.slug%>/delete">DELETE</a></button>
+  </div>
+  <div>
+    <h3 class="padding">ALL COMMENTS</h3>
+    <form method="POST" action="/articles/<%= article.slug %>/comment">
+      <input type="text" id="content" name="content" placeholder="Your Comment">
+      <input type="text" name="article" value="<%= article._id %>" readonly hidden>
+      <button>Add Comment</button>
+    </form>
+    <% if(article.comments) { %> 
+      <% article.comments.forEach(comment => { %>
+        <p><%= comment.content %></p>
+        <a href="/articles/comment/<%=comment._id%>/like"> <button>Likes: <%= comment.likes%></button></a>
+        <a href="/articles/comment/<%=comment._id%>/dislike"> <button>Dislikes: <%= comment.dislikes%></button></a>
+        <a href="/articles/comment/<%=comment._id%>/delete"> <button>DELETE</button></a>
+      <% }) %>
+      <% } %>
+  </div>
+  </body>
+</html>
