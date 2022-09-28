@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add New Article</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="form-cont">
+        <h1 class="center padding">Add New Article</h1>
+    <form class="column margin" action="/articles/add" method="post">
+        <input type="text" name="title" placeholder="Title">
+        <textarea name="description" id="description" cols="30" rows="10">
+            Description
+        </textarea>
+        <input type="text" name="author" placeholder="Author" value="<%= session.userId %>" readonly hidden>
+        <button class="btn">Publish Article</button>
+    </form>
+   </div>
+  </body>
+</html>
