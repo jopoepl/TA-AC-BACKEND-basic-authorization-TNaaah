@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title >Podcast Details</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+    rel="stylesheet">   
+
+</head>
+<body class="bg-yellow-500">
+    <button class=" bg-red-500 hover:bg-red-700 text-white font-bold py-2 p-12 m-4 absolute left-2 top-4"> <a href="/">HOME</a></button> </body>
+    <button class=" bg-red-500 hover:bg-red-700 text-white font-bold py-2 p-12 m-4 absolute right-2 top-4"> <a href="/podcast">ALL Podcasts</a></button>  </body>
+
+
+    <h1 class="font-serif text-4xl text-center p-16">You Are Viewing <%= podcast.name %></h1>
+
+
+    <div class="p-2 m-4 flex justify-center flex-wrap">
+        <div class="p-4 m-4 w-4/12 divide-solid border-2 border-grey-400 flex flex-col justify-start">
+            <h3><span class="m-6 font-bold text-red-800">NAME: </span> <span class="underline font-bold"><%= podcast.name %></h3>
+            <p><span class="m-6 font-bold text-red-800">TYPE: </span> <%= podcast.podcastType %></p>
+            <% if(userType == "admin"){ %>
+                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 m-4 rounded-l"><a href="/podcast/<%= podcast._id %>/delete">DELETE</a></button>
+
+           <% } %>
+        </div>
+    </div>
+  </body>
+</html>
