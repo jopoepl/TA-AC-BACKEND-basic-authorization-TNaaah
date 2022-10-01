@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title >USER Dashboard</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+    rel="stylesheet">  </head>
+<body class="bg-yellow-500">
+    <div class="flex justify-between">
+    <button class=" bg-red-500 hover:bg-red-700 text-white font-bold py-2 p-12 m-4"> <a href="/">HOME</a></button>
+    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 p-12 m-4"> <a href="/admin/logout">LOGOUT</a></button>
+
+    </div>
+    
+    <h1 class="font-serif text-4xl text-center p-16">Welcome to the Admin Dashboard, <%= name %></h1>
+    <div class="text-center">
+        <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 p-12 m-4"> <a href="/podcast/create">ADD NEW PODCAST</a></button> 
+        <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 p-12 m-4"> <a href="/podcast/">VIEW ALL PODCASTS</a></button> 
+    </div>
+   
+</body>
+</html>

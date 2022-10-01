@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+    rel="stylesheet">  </head>
+  <body class="bg-yellow-500">
+    <h1 class="text-6xl p-10 text-center"><%= title %></h1>
+    <p class="text-2xl text-center">Welcome to <%= title %></p>
+  <div class="p-8 text-center flex flex-col justify-center">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 p-80 m-8"> <a href="/admin/dashboard">DASHBOARD</a> </button>
+      <div class="flex flex-col justify-center">
+        <!-- <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 p-96 m-4"> <a href="/admin/signup">ADMIN SIGNUP</a> </button> -->
+        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 p-96 m-4"> <a href="/admin/login">ADMIN LOGIN</a></button>
+      </div>
+      <div  class="flex flex-col justify-center">
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 p-80 m-4"><a href="/users/signup">USER SIGNUP</a></button>
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 p-80 m-4"><a href="/users/login">USER LOGIN</a></button>
+      </div>
+  </div>
+  </body>
+</html>
